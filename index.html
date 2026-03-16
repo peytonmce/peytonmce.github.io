@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peyton McEntire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400&family=IBM+Plex+Serif:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background: #0c0c0f;
+      color: #d0cfd8;
+      font-family: 'IBM Plex Serif', Georgia, serif;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 72px 28px 80px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: #7ecfb3;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 1.7rem;
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      margin: 0 0 6px;
+    }
+
+    .subtitle {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      color: #666;
+      margin: 0 0 52px;
+      letter-spacing: 0.03em;
+    }
+
+    .bio {
+      color: #999;
+      font-size: 0.95rem;
+      font-weight: 300;
+      margin-bottom: 56px;
+    }
+
+    .bio p + p {
+      margin-top: 14px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #1c1c22;
+      margin: 48px 0;
+    }
+
+    h2 {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #444;
+      margin: 0 0 28px;
+    }
+
+    .tab-bar {
+      display: flex;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      color: #555;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      padding: 0 0 3px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+    }
+
+    .tab-btn.active {
+      color: #d0cfd8;
+      border-bottom-color: #3a3a45;
+    }
+
+    .tab-btn:hover {
+      color: #999;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .project {
+      margin-bottom: 36px;
+    }
+
+    .project-title {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 400;
+      color: #d0cfd8;
+      margin-bottom: 4px;
+    }
+
+    .project-links {
+      font-size: 0.75rem;
+      margin-left: 10px;
+      color: #555;
+    }
+
+    .project-links a {
+      color: #7ecfb3;
+    }
+
+    .project p {
+      color: #777;
+      font-size: 0.88rem;
+      font-weight: 300;
+      margin: 5px 0 8px;
+    }
+
+    .project-tags {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: #3d3d4a;
+      letter-spacing: 0.04em;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-family: 'IBM Plex Mono', monospace;
+      color: #2e2e38;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 48px 20px 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Peyton McEntire</h1>
+  <p class="subtitle">student at UT Dallas · SWE / game dev</p>
+
+  <div class="bio">
+    <p>I'm a Computer Science student at UT Dallas focused on software engineering and game development. I enjoy building full-stack applications, backend systems, and games that people love.</p>
+    <p>I've shipped mobile and web projects with real users, including published games on iOS and Android, and I'm currently looking for software engineering internships for Summer 2026.</p>
+  </div>
+
+  <hr>
+
+  <h2>Projects</h2>
+
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="swe">Software</button>
+    <button class="tab-btn" data-tab="games">Games</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-swe">
+
+    <div class="project">
+      <div class="project-title">
+        TagIt
+        <span class="project-links">
+          <a href="https://github.com/acm-projects/tagit" target="_blank" rel="noopener noreferrer">github</a>
+        </span>
+      </div>
+      <p>Full-stack AI email productivity extension built in ACM Projects at UTD for students.</p>
+      <p>Developing a Chrome extension that transforms inbox emails into summaries, tags, and actionable tasks using backend services for processing unstructured email data and extracting deadlines.</p>
+      <p>Built with OAuth integrations for Gmail and Outlook, plus Google Calendar sync with conflict detection in a 5-person Agile team.</p>
+      <div class="project-tags">JavaScript, Python, Chrome Extensions, Full Stack, OAuth, Gmail API, Outlook API, MongoDB</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">
+        MovieRTR
+        <span class="project-links">
+          <a href="https://github.com/peytonmce/MOVIERTR" target="_blank" rel="noopener noreferrer">github</a>
+          &middot;
+          <a href="https://movie-rtr.onrender.com/" target="_blank" rel="noopener noreferrer">live</a>
+        </span>
+      </div>
+      <p>Full-stack movie rating platform where users can browse films, leave reviews, and manage accounts.</p>
+      <p>Built a Node.js/Express backend with Prisma and PostgreSQL to support user, movie, and review CRUD logic, then implemented secure JWT authentication with bcrypt hashing.</p>
+      <p>Deployed on Render with hosted PostgreSQL and CI/CD through GitHub.</p>
+      <div class="project-tags">TypeScript, React, Node.js, Express, Prisma, PostgreSQL, JWT, Render</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">
+        Disc Golf 2D
+        <span class="project-links">
+          <a href="https://apps.apple.com/us/app/disc-golf-2d/id6752662648" target="_blank" rel="noopener noreferrer">app store</a>
+          &middot;
+          <a href="https://groups.google.com/g/dg2d-testers/about" target="_blank" rel="noopener noreferrer">google play</a>
+          
+        </span>
+      </div>
+      <p>Cross-platform mobile game shipped on iOS and Android with a focus on backend services and live player systems.</p>
+      <p>Built backend integrations with Firebase for authentication and cloud data storage, then implemented Anonymous Auth, Apple Game Center, and Google Play Games Services for player identity and leaderboard functionality.</p>
+      <p>Reached 1,000+ downloads, 50+ daily active users, and generated revenue through ads and in-app purchases.</p>
+      <div class="project-tags">Unity, C#, Firebase, Backend Systems, Authentication, Apple Game Center, Google Play Games, iOS, Android</div>
+    </div>
+
+  </div>
+
+  <div class="tab-panel" id="tab-games">
+    <div class="project">
+      <div class="project-title">
+        Solus
+        <span class="project-links">
+          <a href="https://peyton-mce.itch.io/solus" target="_blank" rel="noopener noreferrer">itch.io</a>
+          &middot;
+          <a href="https://www.youtube.com/watch?v=nuWrrkS8PXs&t=1s" target="_blank" rel="noopener noreferrer">trailer</a>
+        </span>
+      </div>
+      <p>Unity project built with a focus on high-fidelity visuals and modular gameplay architecture.</p>
+      <p>Developed gameplay and rendering systems using HDRP, while building event-driven systems to keep interactions modular, extensible, and easier to iterate on during development.</p>
+      <div class="project-tags">Unity, C#, HDRP, Event-Driven Systems, Gameplay Systems, Rendering Pipelines</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">
+        Shelfwatcher
+        <span class="project-links">
+          <a href="https://mtp-games.itch.io/shelf-watcher" target="_blank" rel="noopener noreferrer">itch.io</a>
+        </span>
+      </div>
+      <p>Released Unity game developed while working in MTP, focused on polished gameplay systems and production-ready delivery.</p>
+      <p>Implemented modular gameplay logic and event-driven systems in C#, collaborated through Git-based workflows, and helped ship release builds as part of the MTP team.</p>
+      <p>Reached 10,000+ downloads and 50,000+ YouTube views.</p>
+      <div class="project-tags">Unity, C#, Event-Driven Systems, Game Systems, Git, Team Development, MTP</div>
+    </div>
+
+    <div class="project">
+      <div class="project-title">
+        Nod
+                  <a href="#" target="_blank" rel="noopener noreferrer">(Private)</a>
+
+      </div>
+      <p>Multiplayer-focused Unity project centered on responsive networking and synchronized gameplay systems.</p>
+      <p>Built real-time multiplayer features and client-server gameplay logic, with emphasis on stable state replication, event handling, and scalable systems for live multiplayer interactions.</p>
+      <div class="project-tags">Unity, C#, Multiplayer, Networking, Client-Server Systems, Gameplay Programming</div>
+    </div>
+
+  </div>
+
+  <hr>
+
+  <h2>Contact</h2>
+  <div class="contact-links">
+    <a href="mailto:pcmbus1@gmail.com">email</a>
+    <a href="https://github.com/peytonmce" target="_blank" rel="noopener noreferrer">github</a>
+    <a href="https://www.linkedin.com/in/peyton-mcentire-6904a7291/" target="_blank" rel="noopener noreferrer">linkedin</a>
+  </div>
+
+  <footer>
+    <p>Peyton - UTD</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
